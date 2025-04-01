@@ -1,0 +1,59 @@
+<c:FragmentDefinition 
+    xmlns:c="sap.ui.core"
+    xmlns="sap.ui.table"
+    xmlns:m="sap.m"
+    
+>
+    <Table 
+        id="suppliersTable" 
+        rows="{/Suppliers}"
+        selectionMode="None"
+        rowActionCount="1"
+        width="100%"
+    >
+        <columns>
+            <Column width="10rem" filterProperty="SupplierID" sortProperty="SupplierID">
+                <label>
+                    <m:Label text="{i18n>id}"/>
+                </label>
+                <template>
+                    <m:Text text="{SupplierID}"/>
+                </template>
+            </Column>
+            <Column width="15rem" filterProperty="CompanyName" sortProperty="CompanyName">
+                <label>
+                    <m:Label text="{i18n>companyName}"/>
+                </label>
+                <template>
+                    <m:Text text="{CompanyName}"/>
+                </template>
+            </Column>
+            <Column width="15rem" filterProperty="ContactName" sortProperty="ContactName">
+                <label>
+                    <m:Label text="{i18n>contactName}"/>
+                </label>
+                <template>
+                    <m:Text text="{ContactName}"/>
+                </template>
+            </Column>
+            <Column width="15rem">
+                <label>
+                    <m:Label text="{i18n>city}"/>
+                </label>
+                <template>
+                    <m:Text text="{City}"/>
+                </template>
+            </Column>
+        </columns>
+        <rowActionTemplate>
+            <RowAction>
+                <items>
+                    <RowActionItem
+                        icon="sap-icon://navigation-right-arrow"
+                        press="onRowActionPress" />
+                </items>
+            </RowAction>
+        </rowActionTemplate>
+    </Table>
+ 
+</c:FragmentDefinition>

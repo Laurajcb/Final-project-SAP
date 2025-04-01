@@ -57,7 +57,7 @@
     }
   },
   "sap.ui5": {
-    "flexEnabled": true,
+    "flexEnabled": false,
     "dependencies": {
       "minUI5Version": "1.134.1",
       "libs": {
@@ -108,12 +108,23 @@
           "target": [
             "TargetHome"
           ]
+        },
+        {
+          "name": "detail",
+          "pattern": "detail/{SupplierID}",
+          "target": "detail"
         }
       ],
       "targets": {
         "TargetHome": {
           "id": "Home",
           "name": "Home"
+        },
+        "detail": {
+          "viewId": "detail",
+          "viewName": "Detail",
+          "viewLevel": 2,
+          "viewType": "XML"
         }
       }
     },

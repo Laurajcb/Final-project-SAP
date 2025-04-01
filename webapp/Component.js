@@ -17,10 +17,13 @@ sap.ui.define([
             UIComponent.prototype.init.apply(this, arguments);
 
             // set the device model
-            this.setModel(models.createDeviceModel(), "device");
+            this.setModel(models.createDeviceModel(), "data");
 
             // enable routing
             this.getRouter().initialize();
-        }
+        },
+        setInitModel: function () {
+            HomeHelper.init(this.getModel());
+        } 
     });
 });

@@ -7,8 +7,8 @@ sap.ui.define([
             const aRequestPromises = [
                 new Promise(function (resolve, reject) {
                     oModel.read('/Suppliers', {
-                        filters: oFilters,
-                        succes: resolve,
+                        filters: oFilter,
+                        success: resolve,
                         error: reject
                     })
                 }.bind(this))

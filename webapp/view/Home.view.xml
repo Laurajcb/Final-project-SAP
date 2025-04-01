@@ -1,6 +1,31 @@
-<mvc:View controllerName="com.bootcamp.fiori.finalproject.controller.Home"
+<mvc:View
+    controllerName="com.bootcamp.fiori.finalproject.controller.Home"
     xmlns:mvc="sap.ui.core.mvc"
-    xmlns="sap.m">
-    <Page id="page" title="{i18n>title}">
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    displayBlock="true"
+>
+    <Page 
+        id="page" 
+        title="{i18n>title}"
+        showHeader="true"
+        class="sapUiContentPadding"
+        contentOnlyBusy="false"
+    >
+        <content>
+            <VBox height="100%" >
+                <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                    <Label text="{i18n>idOComanyName}" class="sapUiTinyMarginEnd"/>
+                    <SearchField id="supplierFilter" width="200px" liveChange=".onFilterChange"/>
+                    <Button text="{i18n>applyFilters}" press=".onApplyFilters" class="sapUiSmallMarginBegin"/>
+                </HBox>
+                <VBox height="100%">
+                    <c:Fragment
+                        fragmentName="com.bootcamp.fiori.finalproject.view.fragments.SuppliersTable"
+                        type="XML"
+                    />
+                </VBox>
+            </VBox>
+        </content>
     </Page>
 </mvc:View>
