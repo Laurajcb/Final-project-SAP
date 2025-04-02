@@ -1,47 +1,59 @@
-<c:FragmentDefinition 
+<c:FragmentDefinition
     xmlns:c="sap.ui.core"
     xmlns="sap.ui.table"
     xmlns:m="sap.m"
-    
+    height="100%"
 >
-    <Table 
-        id="suppliersTable" 
+    <Table
+        id="suppliersTable"
         rows="{/Suppliers}"
         selectionMode="None"
         rowActionCount="1"
         width="100%"
     >
         <columns>
-            <Column width="10rem" filterProperty="SupplierID" sortProperty="SupplierID">
+            <Column
+                width="10%"
+                filterProperty="SupplierID"
+                sortProperty="SupplierID"
+            >
                 <label>
-                    <m:Label text="{i18n>id}"/>
+                    <m:Label text="{i18n>id}" />
                 </label>
                 <template>
-                    <m:Text text="{SupplierID}"/>
+                    <m:Text text="{SupplierID}" />
                 </template>
             </Column>
-            <Column width="15rem" filterProperty="CompanyName" sortProperty="CompanyName">
+            <Column
+                width="30%"
+                filterProperty="CompanyName"
+                sortProperty="CompanyName"
+            >
                 <label>
-                    <m:Label text="{i18n>companyName}"/>
+                    <m:Label text="{i18n>companyName}" />
                 </label>
                 <template>
-                    <m:Text text="{CompanyName}"/>
+                    <m:Text text="{CompanyName}" />
                 </template>
             </Column>
-            <Column width="15rem" filterProperty="ContactName" sortProperty="ContactName">
+            <Column
+                width="30%"
+                filterProperty="ContactName"
+                sortProperty="ContactName"
+            >
                 <label>
-                    <m:Label text="{i18n>contactName}"/>
+                    <m:Label text="{i18n>contactName}" />
                 </label>
                 <template>
-                    <m:Text text="{ContactName}"/>
+                    <m:Text text="{ContactName}" />
                 </template>
             </Column>
-            <Column width="15rem">
+            <Column width="30%">
                 <label>
-                    <m:Label text="{i18n>city}"/>
+                    <m:Label text="{i18n>city}" />
                 </label>
                 <template>
-                    <m:Text text="{City}"/>
+                    <m:Text text="{City}" />
                 </template>
             </Column>
         </columns>
@@ -50,10 +62,10 @@
                 <items>
                     <RowActionItem
                         icon="sap-icon://navigation-right-arrow"
-                        press="onRowActionPress" />
+                        press="onRowActionPress"
+                    />
                 </items>
             </RowAction>
         </rowActionTemplate>
     </Table>
- 
 </c:FragmentDefinition>

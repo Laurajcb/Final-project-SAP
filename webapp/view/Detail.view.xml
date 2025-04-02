@@ -1,69 +1,68 @@
-<mvc:View 
+<mvc:View
     controllerName="com.bootcamp.fiori.finalproject.controller.Detail"
     xmlns="sap.m"
     xmlns:mvc="sap.ui.core.mvc"
-	xmlns:l="sap.ui.layout"
-	xmlns:f="sap.ui.layout.form"
-	xmlns:core="sap.ui.core"
+    xmlns:l="sap.ui.layout"
+    xmlns:f="sap.ui.layout.form"
+    xmlns:core="sap.ui.core"
     id="detail"
 >
-    <Page
-		showHeader="true" >
+    <Page showHeader="true">
         <VBox class="sapUiSmallMargin">
-			<f:SimpleForm id="SimpleFormChangeColumn_oneGroup234"
-				editable="false"
-				layout="ColumnLayout"
-				title="Supplier Information"
-				columnsM="2"
-				columnsL="3"
-				columnsXL="4"
-				>
-				<f:content>
-					<Label text="{i18n>CompanyName}" />
-					<Text id="name" text="{CompanyName}"/>
-					
-					<Label text="{i18n>ContactName}" />
-					<Text text="{ContactName}"></Text>
-					
-					<Label text="{i18n>Address}" />
-					<Text text="{Address}" />
+            <f:SimpleForm
+                id="SimpleFormChangeColumn_oneGroup234"
+                editable="false"
+                layout="ColumnLayout"
+                title="Supplier Information"
+                columnsM="2"
+                columnsL="3"
+                columnsXL="4"
+            >
+                <f:content>
+                    <Label text="{i18n>CompanyName}" />
+                    <Text
+                        id="name"
+                        text="{CompanyName}"
+                    />
 
-					<Label text="{i18n>City}" />
-					<Text text="{City}" />
+                    <Label text="{i18n>ContactName}" />
+                    <Text text="{ContactName}" />
 
-					<Label text="{i18n>Region}" />
-					<Text text="{Region}" />
+                    <Label text="{i18n>Address}" />
+                    <Text text="{Address}" />
 
-					<Label text="{i18n>PostalCode}" />
-					<Text text="{PostalCode}" />
+                    <Label text="{i18n>City}" />
+                    <Text text="{City}" />
 
-					<Label text="{i18n>Country}" />
-					<Text text="{Country}" />
+                    <Label text="{i18n>Region}" />
+                    <Text text="{Region}" />
 
-					<Label text="{i18n>Phone}" />
-					<Text text="{Phone}" />
+                    <Label text="{i18n>PostalCode}" />
+                    <Text text="{PostalCode}" />
 
-					<Label text="{i18n>Fax}" />
-					<Text text="{Fax}" />
+                    <Label text="{i18n>Country}" />
+                    <Text text="{Country}" />
 
-					
-				</f:content>
-			</f:SimpleForm>
-		</VBox>
-		<VBox>
-			<ToolbarSpacer/>
-			<Button text="{i18n>NewMaterial}" press="onCreateMaterial"/>
-		</VBox>
-		 <VBox height="100%">
+                    <Label text="{i18n>Phone}" />
+                    <Text text="{Phone}" />
+
+                    <Label text="{i18n>Fax}" />
+                    <Text text="{Fax}" />
+                </f:content>
+            </f:SimpleForm>
+        </VBox>
+
+        <FlexBox direction="Row" justifyContent="End" class="sapUiMediumMarginEnd" >
+            <Button
+                text="{i18n>NewMaterial}"
+                press="onCreateMaterial"
+            />
+        </FlexBox>
+        <VBox height="100%">
             <core:Fragment
                 fragmentName="com.bootcamp.fiori.finalproject.view.fragments.ProductsTable"
                 type="XML"
             />
-		</VBox>	
-		
-		
-           
-
-		
-	</Page>
+        </VBox>
+    </Page>
 </mvc:View>

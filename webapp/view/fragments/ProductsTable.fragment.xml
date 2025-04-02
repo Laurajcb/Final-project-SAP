@@ -1,8 +1,9 @@
-<c:FragmentDefinition xmlns="sap.m"
+<c:FragmentDefinition
+    xmlns="sap.m"
     xmlns:c="sap.ui.core"
     xmlns:smartTable="sap.ui.comp.smarttable"
 >
-    <VBox >
+    <VBox fitContainer="true">
         <smartTable:SmartTable
             id="ST_ORDER_D"
             entitySet="Products"
@@ -20,13 +21,8 @@
             enableAutoColumnWidth="true"
             editTogglable="false"
             beforeRebindTable=".onBeforeRebindTable"
-            
         >
-            <smartTable:customToolbar>
-            </smartTable:customToolbar>
+            <smartTable:customToolbar />
         </smartTable:SmartTable>
     </VBox>
-
-    
-
 </c:FragmentDefinition>

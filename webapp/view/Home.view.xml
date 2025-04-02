@@ -4,6 +4,7 @@
     xmlns="sap.m"
     xmlns:c="sap.ui.core"
     displayBlock="true"
+    height="100%"
 >
     <Page 
         id="page" 
@@ -12,20 +13,18 @@
         class="sapUiContentPadding"
         contentOnlyBusy="false"
     >
-        <content>
-            <VBox height="100%" >
-                <HBox alignItems="Center" class="sapUiMediumMarginBottom">
-                    <Label text="{i18n>idOComanyName}" class="sapUiTinyMarginEnd"/>
-                    <SearchField id="supplierFilter" width="200px" liveChange=".onFilterChange"/>
-                    <Button text="{i18n>applyFilters}" press=".onApplyFilters" class="sapUiSmallMarginBegin"/>
-                </HBox>
-                <VBox height="100%">
-                    <c:Fragment
-                        fragmentName="com.bootcamp.fiori.finalproject.view.fragments.SuppliersTable"
-                        type="XML"
-                    />
-                </VBox>
-            </VBox>
-        </content>
+        <VBox fitContainer="true">
+            <HBox alignItems="Center" class="sapUiMediumMarginBottom">
+                <Label text="{i18n>idOComanyName}" class="sapUiTinyMarginEnd"/>
+                <SearchField id="supplierFilter" width="200px" liveChange=".onFilterChange"/>
+                <Button text="{i18n>applyFilters}" press=".onApplyFilters" class="sapUiSmallMarginBegin"/>
+            </HBox>
+            <FlexBox fitContainer="true" height="100%" direction="Column">
+                <c:Fragment
+                    fragmentName="com.bootcamp.fiori.finalproject.view.fragments.SuppliersTable"
+                    type="XML"
+                />
+            </FlexBox>
+        </VBox>
     </Page>
 </mvc:View>
