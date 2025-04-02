@@ -1,4 +1,5 @@
 <c:FragmentDefinition
+    xmlns:table="sap.ui.mdc.table"
     xmlns="sap.m"
     xmlns:c="sap.ui.core"
     xmlns:smartTable="sap.ui.comp.smarttable"
@@ -18,11 +19,15 @@
             showFullScreenButton="true"
             enableAutoBinding="true"
             class="sapUiResponsiveContentPadding"
-            enableAutoColumnWidth="true"
             editTogglable="false"
             beforeRebindTable=".onBeforeRebindTable"
         >
             <smartTable:customToolbar />
+            <smartTable:layoutData>
+                <FlexItemData
+                    growFactor="1"
+                />
+            </smartTable:layoutData>
         </smartTable:SmartTable>
     </VBox>
 </c:FragmentDefinition>
