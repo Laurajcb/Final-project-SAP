@@ -1,0 +1,32 @@
+<c:FragmentDefinition xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+    xmlns:smartTable="sap.ui.comp.smarttable"
+>
+    <VBox >
+        <smartTable:SmartTable
+            id="ST_ORDER_D"
+            entitySet="Products"
+            tableBindingPath="Products"
+            initiallyVisibleFields="ProductID,ProductName,UnitPrice,UnitsInStock"
+            tableType="ResponsiveTable"
+            enableExport="true"
+            useVariantManagement="false"
+            useTablePersonalisation="true"
+            header="{i18n>headerProductDetails}"
+            showRowCount="true"
+            showFullScreenButton="true"
+            enableAutoBinding="true"
+            class="sapUiResponsiveContentPadding"
+            enableAutoColumnWidth="true"
+            editTogglable="false"
+            beforeRebindTable=".onBeforeRebindTable"
+            
+        >
+            <smartTable:customToolbar>
+            </smartTable:customToolbar>
+        </smartTable:SmartTable>
+    </VBox>
+
+    
+
+</c:FragmentDefinition>

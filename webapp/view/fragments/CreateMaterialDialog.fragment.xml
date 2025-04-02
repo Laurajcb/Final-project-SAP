@@ -1,0 +1,27 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:form="sap.ui.layout.form">
+    <Dialog 
+        id="createMaterialDialog" 
+        title="{i18n>newMaterialTitle}"
+        >
+        <content>
+            <form:SimpleForm editable="true" layout="ResponsiveGridLayout">
+                <form:content>
+                    <Label text="{i18n>ProductID}" required="true"/>
+                    <Input value="{localModel>/newMaterial/ProductID}"/>
+                    <Label text="{i18n>ProductName}" required="true"/>
+                    <Input value="{localModel>/newMaterial/ProductName}"/>
+                    <Label text="{i18n>UnitPrice}"/>
+                    <Input value="{localModel>/newMaterial/UnitPrice}" type="Number"/>
+                    <Label text="{i18n>UnitsInStock}"/>
+                    <Input value="{localModel>/newMaterial/UnitsInStock}" type="Number"/>
+                </form:content>
+            </form:SimpleForm>
+        </content>
+        <beginButton>
+            <Button text="{i18n>Create}" press="onSaveMaterial"/>
+        </beginButton>
+        <endButton>
+            <Button text="{i18n>Cancel}" press="onCancelDialog"/>
+        </endButton>
+    </Dialog>
+</core:FragmentDefinition>
